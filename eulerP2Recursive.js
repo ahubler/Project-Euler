@@ -5,12 +5,15 @@ function main(){
   $('.output').append('<p>Total sum: '+fibSum(1,2,0)+'</p>');//outputs the sum of all even terms
 }
 function fibSum(num1, num2, sum){
-  if(num2 % 2 == 0 ){//checks for an even number
-    sum += num2;// If b is even, add it to our total sum
+  var c  = num1 + num2;
+  var mySum = sum
+  $('.output').append('<p>'+num1+'+'+num2+'='+c+'</p>');
+  if(num2 % 2 == 0){//checks for an even number
+    mySum += num2;// If num2 is even, add it to our total sum
     $('.output').append('<p>b was even! mySum is now: '+mySum+'</p>');
   }
-  if(nume <= upperLimit){
-    return(fibSum(num2, num1+num2, sum));//if num2 is under the limit, we pass the values to the same function again
+  if(num2 <= upperLimit){
+    return(fibSum(num2, c, mySum));//if num2 is under the limit, we pass the values to the same function again
   }
   else{
     return sum;//if num2 is >= the limit, we are done and we can pass values back through all our recursion.
