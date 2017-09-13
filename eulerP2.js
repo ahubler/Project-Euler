@@ -1,4 +1,4 @@
-//Problem 1 asks for the sum of all even terms in the Fibonacci sequence < 4 million
+//Problem 2 asks for the sum of all even terms in the Fibonacci sequence < 4 million
 //we'll use the formula A+B=C, then reuse B as the next A and C as the next B
 function main(){
   var mySum = 0;//will keep the running total sum
